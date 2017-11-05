@@ -65,5 +65,5 @@ if (action == MOVE) {
 }
 
 x = clamp(x, (x - bbox_left), room_width + (x - bbox_right));
-y = clamp(y, sprite_height, room_height);
+y = clamp(y, sprite_get_height(mask_index), room_height);
 #endregion
