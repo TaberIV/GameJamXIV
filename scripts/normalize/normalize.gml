@@ -4,5 +4,7 @@ vector = argument0;
 
 mag = sqrt(sqr(vector[0]) + sqr(vector[1]));
 
-vector[@ 0] = vector[0] / mag;
-vector[@ 1] = vector[1] / mag;
+if (mag != 0) {
+	vector[@ 0] = vector[0] / mag;
+	vector[@ 1] = vector[1] / mag;
+}
