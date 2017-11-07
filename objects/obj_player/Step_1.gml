@@ -24,12 +24,12 @@ move_override = false;
 
 #region Action Processing
 // Buttons
-jump_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check(vk_space);
+jump_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_space);
 
 var attack_weak_pressed = gamepad_button_check_pressed(0, gp_face3) || keyboard_check_pressed(ord("Z"));
 var attack_strong_pressed = gamepad_button_check_pressed(0, gp_face4) || keyboard_check_pressed(ord("X"));
 
-block_down = gamepad_button_check(0, gp_shoulderrb)  || keyboard_check_pressed(vk_shift);;
+block_down = gamepad_button_check(0, gp_shoulderrb)  || keyboard_check(vk_shift);
 
 action = NONE;
 
