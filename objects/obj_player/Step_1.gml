@@ -4,18 +4,32 @@
 move_input = [0, 0];
 move_input[0] = gamepad_axis_value(0, gp_axislh);
 move_input[1] = gamepad_axis_value(0, gp_axislv);
+
+// If no controller input, check keys
+if (move_input[0] == 0 and move_input[1] == 0) {
+	if (keyboard_check(ord("A")) || keyboard_check(vk_left))
+		move_input[0] -= 1;
+	if (keyboard_check(ord("D")) || keyboard_check(vk_right))
+		move_input[0] += 1;
+		
+	if (keyboard_check(ord("W")) || keyboard_check(vk_up))
+		move_input[1] -= 1;
+	if (keyboard_check(ord("S")) || keyboard_check(vk_down))
+		move_input[1] += 1;
+}
+
 normalize(move_input);
 
 move_override = false;
 
 #region Action Processing
 // Buttons
-jump_pressed = gamepad_button_check_pressed(0, gp_face1);
+jump_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check(vk_space);
 
-var attack_weak_pressed = gamepad_button_check_pressed(0, gp_face3);
-var attack_strong_pressed = gamepad_button_check_pressed(0, gp_face4);
+var attack_weak_pressed = gamepad_button_check_pressed(0, gp_face3) || keyboard_check_pressed(ord("Z"));
+var attack_strong_pressed = gamepad_button_check_pressed(0, gp_face4) || keyboard_check_pressed(ord("X"));
 
-block_down = gamepad_button_check(0, gp_shoulderrb);
+block_down = gamepad_button_check(0, gp_shoulderrb)  || keyboard_check_pressed(vk_shift);;
 
 action = NONE;
 
