@@ -65,6 +65,9 @@ if (action == MOVE or move_override) {
 
 x = clamp(x, (x - bbox_left), room_width + (x - bbox_right));
 y = clamp(y, sprite_get_height(mask_index), room_height);
+
+// Set depth
+depth = -y - ground;
 #endregion
 
 #region Attacks

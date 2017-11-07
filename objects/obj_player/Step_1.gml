@@ -1,8 +1,5 @@
 /// @description Get input
 
-// Set depth
-depth = -y - ground;
-
 // Movement
 move_input = [0, 0];
 move_input[0] = gamepad_axis_value(0, gp_axislh);

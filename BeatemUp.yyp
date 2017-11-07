@@ -442,7 +442,7 @@
             "Key": "d715d127-13d8-482d-9fce-e8bdce18b644",
             "Value": {
                 "id": "1604554e-2b15-48f8-9aa4-d524b2e041b7",
-                "resourcePath": "sprites\\spr_player_attack_air1\\spr_player_attack_air1.yy",
+                "resourcePath": "sprites\\spr_player_attack_air\\spr_player_attack_air.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -492,6 +492,14 @@
                 "id": "fa985e5d-af44-467b-b6d0-a1c43f401c76",
                 "resourcePath": "views\\f1d75a27-3da0-4a46-abd6-9cee583ff54b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f24e0cd8-47ac-4d4e-b1a2-1a7804c463cc",
+            "Value": {
+                "id": "140aa91d-537b-4ccd-8c56-92bf8f2fe953",
+                "resourcePath": "sprites\\spr_player_attack_air_dp\\spr_player_attack_air_dp.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

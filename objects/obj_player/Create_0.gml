@@ -2,6 +2,9 @@
 
 gamepad_set_axis_deadzone(0, 0.5);
 
+// Set depth
+depth = -y;
+
 // Movement
 move_speed = 3;
 move_override = false;
