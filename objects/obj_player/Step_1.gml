@@ -45,18 +45,22 @@ if (block_down and grounded)
 var attack_pressed = attack_weak_pressed || attack_strong_pressed;
 var spr_name = sprite_get_name(sprite_index);
 var attacking = string_pos("attack", spr_name) != 0 and image_index != 0;
-air_attack_charge |= grounded or hit;
+air_attack_charge |= grounded;
 
 if ((attack_pressed and (grounded or air_attack_charge)) or attacking) {
 	action = ATTACK;
 	
-	if (attacking) {
-		var len = string_length(spr_name);
-		attack_num = int64(string_char_at(spr_name, len));
-	} else
-		attack_num = 0;
+	// Grounded attacks
+	if (grounded) {
+		if (attacking) {
+			var len = string_length(spr_name);
+			attack_num = int64(string_char_at(spr_name, len));
+		} else
+			attack_num = 0;
+	}
 	
-	if (!(attacking or grounded) or (attacking and string_pos("air", spr_name) != 0)) {
+	// Air attack
+	else if (!attacking or (attacking and string_pos("air", spr_name) != 0)) {
 		attack_num = 4;
 		air_attack_charge = false;
 	}
