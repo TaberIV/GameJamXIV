@@ -2,4 +2,4 @@
 
 width = 48;
 height = sprite_height - width;
-depth = -y;
+depth = -y * 10;

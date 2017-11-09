@@ -1,0 +1,5 @@
+Combo List:
+Y:						Big Kick
+X > X > Forward + X:	Double punch to hook combo
+X > X > Y:				Double punch to DP
+X > Y > jc > X > Y:		Full arial DP combo
