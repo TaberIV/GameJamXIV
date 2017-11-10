@@ -7,7 +7,7 @@ draw_ellipse(bbox_left, bbox_bottom - 2 - ground, bbox_right, bbox_bottom + 2 - 
 draw_set_alpha(1);
 
 // Draw self
-draw_sprite_ext(sprite_index, -1, x, y + height, image_xscale, image_yscale, 0, c_white, 1);
+draw_sprite_ext(sprite_index, -1, x, y + height, image_xscale, image_yscale, 0, (object_index == obj_grunt) ? c_black : c_white, 1);
 
 // Draw hitbox
 if (global.debug) {
