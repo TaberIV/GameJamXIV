@@ -2,8 +2,6 @@
 
 global.debug = false;
 
-instance_create_depth(0, 0, -1000, obj_camera);
-
 // Actions
 #macro HIT_STUN -1
 #macro NONE 0

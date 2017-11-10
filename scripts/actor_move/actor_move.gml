@@ -43,6 +43,6 @@ if (action == MOVE or move_override) {
 }
 
 x = clamp(x, (x - bbox_left), room_width + (x - bbox_right));
-y = clamp(y, sprite_get_height(mask_index), room_height);
+y = clamp(y, global.room_y_min, room_height);
 
 actor_set_depth();

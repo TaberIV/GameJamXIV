@@ -1,0 +1,13 @@
+Combo List:
+Y:						Big Kick
+X > X > Forward + X:	Double punch to hook combo
+X > Y > Y:				Double punch to DP
+X > Y > jc > X > Y:		Arial DP combo
+
+0 = jab
+1 = jab2
+2 = uppercut
+3 = hook
+4 = ground dp
+5 = air jab
+6 = air dp
